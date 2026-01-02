@@ -9,7 +9,7 @@ variable "name" {
 }
 
 variable "engine_type" {
-  description = "Type of broker engine, `ActiveMQ` or `RabbitMQ`"
+  description = "Type of broker engine, ActiveMQ or RabbitMQ"
   type        = string
 }
 
@@ -19,12 +19,12 @@ variable "engine_version" {
 }
 
 variable "storage_type" {
-  description = "Storage type of the broker. For `engine_type` `ActiveMQ`, valid values are `efs` and `ebs` (AWS-default is `efs`). For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported."
+  description = "Storage type of the broker. For engine_type ActiveMQ, valid values are efs and ebs (AWS-default is efs). For engine_type RabbitMQ, only ebs is supported. When using ebs, only the mq.m5 broker instance type family is supported."
   type        = string
 }
 
 variable "host_instance_type" {
-  description = "The broker's instance type. e.g. `mq.t3.micro` or `mq.m5.large`"
+  description = "The broker's instance type. e.g. mq.t3.micro or mq.m5.large"
   type        = string
 }
 
@@ -40,7 +40,7 @@ variable "password" {
 }
 
 variable "deployment_mode" {
-  description = "Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`."
+  description = "Deployment mode of the broker. Valid values are SINGLE_INSTANCE, ACTIVE_STANDBY_MULTI_AZ, and CLUSTER_MULTI_AZ."
   type        = string
   default     = "SINGLE_INSTANCE"
 }
@@ -117,7 +117,7 @@ variable "allow_connections_from_security_groups" {
 }
 
 variable "authentication_strategy" {
-  description = "Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`."
+  description = "Authentication strategy used to secure the broker. Valid values are simple and ldap. ldap is not supported for engine_type RabbitMQ."
   type        = string
   default     = "simple"
 }
